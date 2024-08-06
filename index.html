@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotCoin Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NotCoin Clone</h1>
+        <nav>
+            <a href="#" id="home">Home</a>
+            <a href="#" id="top">Top</a>
+            <a href="#" id="clans">Clans</a>
+            <a href="#" id="wallet">Wallet</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home-section">
+            <h2>Welcome to NotCoin</h2>
+            <button id="send-coin-btn">Send Coin</button>
+        </section>
+        <section id="top-section" style="display:none;">
+            <h2>Top Players</h2>
+            <ul id="top-list"></ul>
+        </section>
+        <section id="clans-section" style="display:none;">
+            <h2>Clans</h2>
+            <ul id="clans-list"></ul>
+        </section>
+        <section id="wallet-section" style="display:none;">
+            <h2>Your Wallet</h2>
+            <p>Balance: <span id="balance">0</span> NotCoin</p>
+            <input type="text" id="add-wallet" placeholder="Add wallet address">
+            <button id="add-wallet-btn">Add Wallet</button>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
