@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NotCoin Clone</title>
+    <title>Кликер Игра</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>NotCoin Clone</h1>
-        <nav>
-            <a href="#" id="home">Home</a>
-            <a href="#" id="top">Top</a>
-            <a href="#" id="clans">Clans</a>
-            <a href="#" id="wallet">Wallet</a>
-        </nav>
+        <h1>Кликер Игра</h1>
+        <div id="telegram-login"></div>
     </header>
     <main>
-        <section id="home-section">
-            <h2>Welcome to NotCoin</h2>
-            <button id="send-coin-btn">Send Coin</button>
+        <section id="game">
+            <div id="coin" onclick="handleClick()"></div>
+            <div id="score">Очки: <span id="score-value">0</span></div>
         </section>
-        <section id="top-section" style="display:none;">
-            <h2>Top Players</h2>
-            <ul id="top-list"></ul>
+        <section id="leaderboard">
+            <h2>Таблица лидеров</h2>
+            <ul id="leaderboard-list">
+                <!-- Записи таблицы лидеров будут здесь -->
+            </ul>
         </section>
-        <section id="clans-section" style="display:none;">
-            <h2>Clans</h2>
-            <ul id="clans-list"></ul>
+        <section id="clans">
+            <h2>Кланы</h2>
+            <ul id="clan-list">
+                <!-- Записи кланов будут здесь -->
+            </ul>
         </section>
-        <section id="wallet-section" style="display:none;">
-            <h2>Your Wallet</h2>
-            <p>Balance: <span id="balance">0</span> NotCoin</p>
-            <input type="text" id="add-wallet" placeholder="Add wallet address">
-            <button id="add-wallet-btn">Add Wallet</button>
+        <section id="upgrades">
+            <h2>Улучшения</h2>
+            <ul id="upgrade-list">
+                <!-- Записи улучшений будут здесь -->
+            </ul>
+        </section>
+        <section id="coin-skins">
+            <h2>Скины для монет</h2>
+            <ul id="coin-skin-list">
+                <!-- Записи скинов для монет будут здесь -->
+            </ul>
         </section>
     </main>
-    <script src="scripts.js"></script>
+    <script src="https://telegram.org/js/telegram-widget.js?15" data-telegram-login="ваш_бот" data-size="large" data-userpic="false" data-auth-url="http://ваш_сервер/auth/telegram" data-request-access="write"></script>
+    <script src="app.js" type="module"></script>
 </body>
 </html>
